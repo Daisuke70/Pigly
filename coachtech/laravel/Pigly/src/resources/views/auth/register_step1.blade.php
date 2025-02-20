@@ -17,7 +17,7 @@
                 @csrf
                 <div class="register-form__group">
                     <label class="register-form__label" for="name">お名前</label>
-                    <input class="register-form__input" type="text" name="name" id="name" placeholder="名前を入力">
+                    <input class="register-form__input" type="text" name="name" id="name" placeholder="名前を入力" value="{{ old('name') }}" />
                     <p class="register-form__error-message">
                         @error('name')
                         {{ $message }}
@@ -26,7 +26,7 @@
                 </div>
                 <div class="register-form__group">
                     <label class="register-form__label" for="email">メールアドレス</label>
-                    <input class="register-form__input" type="mail" name="email" id="email" placeholder="メールアドレスを入力">
+                    <input class="register-form__input" type="mail" name="email" id="email" placeholder="メールアドレスを入力" value="{{ old('email') }}" />
                     <p class="register-form__error-message">
                         @error('email')
                         {{ $message }}
@@ -35,7 +35,7 @@
                 </div>
                 <div class="register-form__group">
                     <label class="register-form__label" for="password">パスワード</label>
-                    <input class="register-form__input" type="password" name="password" id="password" placeholder="パスワードを入力">
+                    <input class="register-form__input" type="password" name="password" id="password" placeholder="パスワードを入力" value="{{ old('password') }}" />
                     <p class="register-form__error-message">
                         @error('password')
                         {{ $message }}

@@ -14,3 +14,4 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/register/step1', [AuthController::class, 'index']);
+Route::post('/register/step2', [AuthController::class, 'store']);
