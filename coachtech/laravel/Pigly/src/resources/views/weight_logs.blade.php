@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/weight_logs.css')}}">
-    <title>Document</title>
-</head>
-<body>
-    <h1>体重管理画面</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/weight_logs.css')}}">
+<link rel="stylesheet" href="{{ asset('css/common.css')}}">
+@endsection
+
+@section('content')
+
+@endsection

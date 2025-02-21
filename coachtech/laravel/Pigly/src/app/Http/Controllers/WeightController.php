@@ -42,4 +42,5 @@ class WeightController extends Controller
         return view('weight_logs');
     }
 
+
 }

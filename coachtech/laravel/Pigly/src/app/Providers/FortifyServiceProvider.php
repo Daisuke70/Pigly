@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
+use Laravel\Fortify\Contracts\LogoutResponse;
 use Illuminate\Support\Facades\Route;
 
 class FortifyServiceProvider extends ServiceProvider
@@ -47,6 +48,15 @@ class FortifyServiceProvider extends ServiceProvider
                 $email = (string) $request->email;
 
             return Limit::perMinute(10)->by($email . $request->ip());
+            });
+
+            $this->app->singleton(LogoutResponse::class, function () {
+                return new class implements LogoutResponse {
+                    public function toResponse($request)
+                    {
+                        return redirect('/login'); // ログアウト後に /login へリダイレクト
+                    }
+                };
             });
     }
 }

@@ -12,7 +12,7 @@
         <h2>ログイン</h2>
 
         <div class="login-form__inner">
-            <form class="login-form__form" action="/weight_logs" method="post">
+            <form class="login-form__form" action="/login" method="post">
                 @csrf
                 <div class="login-form__group">
                     <label class="login-form__label" for="email">メールアドレス</label>
