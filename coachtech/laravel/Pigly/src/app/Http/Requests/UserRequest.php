@@ -24,8 +24,8 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email','max:255', 'unique:users,email'],
+            'name' => ['required'],
+            'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'string', 'min:8'],
         ];
     }
@@ -34,11 +34,8 @@ class UserRequest extends FormRequest
     {
         return [
             'name.required' => '名前を入力してください',
-            'name.string' => '名前は文字列で入力してください',
-            'name.max' => '名前は255文字以下で入力してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
-            'email.max' => 'メールアドレスは255文字以下で入力してください',
             'email.unique' => 'このメールアドレスは既に登録されています',
             'password.required' => 'パスワードを入力してください',
             'password.min' => 'パスワードは8文字以上で入力してください',

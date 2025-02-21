@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
+
     public function index()
     {
         return view('auth.register_step1');
@@ -16,9 +19,17 @@ class AuthController extends Controller
 
     public function store(UserRequest $request)
     {
-        $user = $request->only(['name', 'email', 'password']);
-        $user['password'] = Hash::make($user['password']);
-        User::create($user);
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        Auth::login($user);
+        return redirect('/register/step2');
+    }
+
+    public function showStep2()
+    {
         return view('auth.register_step2');
     }
 }

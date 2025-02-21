@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/auth/register_step1.css')}}">
-    <title>Document</title>
+    <title>アカウント情報の登録</title>
 </head>
 <body>
     <div class="register-form">

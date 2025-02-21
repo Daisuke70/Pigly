@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/auth/register_step1.css')}}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/auth/register_step2.css')}}">
+    <title>体重データの入力</title>
 </head>
 <body>
     <div class="register-form">
@@ -17,7 +17,7 @@
                 @csrf
                 <div class="register-form__group">
                     <label class="register-form__label" for="weight">現在の体重</label>
-                    <input class="register-form__input" type="text" name="weight" id="weight" placeholder="現在の体重を入力" value="{{ old('weight') }}" />
+                    <input class="register-form__input" type="text" name="weight" id="weight" placeholder="現在の体重を入力" value="{{ old('weight') }}" /><span class="kg">kg</span>
                     <p class="register-form__error-message">
                         @error('weight')
                         {{ $message }}
@@ -26,14 +26,14 @@
                 </div>
                 <div class="register-form__group">
                     <label class="register-form__label" for="target_weight">目標の体重</label>
-                    <input class="register-form__input" type="text" name="target_weight" id="target_weight" placeholder="目標の体重を入力" value="{{ old('target_weight') }}" />
+                    <input class="register-form__input" type="text" name="target_weight" id="target_weight" placeholder="目標の体重を入力" value="{{ old('target_weight') }}" /><span class="kg">kg</span>
                     <p class="register-form__error-message">
                         @error('target_weight')
                         {{ $message }}
                         @enderror
                     </p>
                 </div>
-                <input class="register-form__button" type="submit" value="次に進む">
+                <input class="register-form__button" type="submit" value="アカウント作成">
             </form>
         </div>
     </div>
