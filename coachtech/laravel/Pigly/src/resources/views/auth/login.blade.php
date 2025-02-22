@@ -8,8 +8,10 @@
 </head>
 <body>
 <div class="login-form">
-        <h1 class="login-form__heading">PiGLy</h1>
-        <h2>ログイン</h2>
+        <div class="login-form__title">
+            <h1 class="login-form__heading">PiGLy</h1>
+            <h2 class="login-form__heading2">ログイン</h2>
+        </div>
 
         <div class="login-form__inner">
             <form class="login-form__form" action="/login" method="post">
@@ -32,9 +34,11 @@
                         @enderror
                     </p>
                 </div>
-                <input class="login-form__button" type="submit" value="ログイン">
+                <div class="login-form__button">
+                    <input class="login" type="submit" value="ログイン">
+                </div>
             </form>
-            <a href="/register/step1">アカウント作成はこちら</a>
+            <a href="/register/step1" class="create-account">アカウント作成はこちら</a>
         </div>
     </div>
 </body>

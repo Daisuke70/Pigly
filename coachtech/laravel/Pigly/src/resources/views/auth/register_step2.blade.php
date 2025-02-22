@@ -8,32 +8,42 @@
 </head>
 <body>
     <div class="register-form">
-        <h1 class="register-form__heading">PiGLy</h1>
-        <h2>新規会員登録</h2>
-        <p>STEP2 体重データの入力</p>
+        <div class="register-form__title">
+            <h1 class="register-form__heading">PiGLy</h1>
+            <h2 class="register-form__heading2">新規会員登録</h2>
+            <p>STEP2 体重データの入力</p>
+        </div>
 
         <div class="register-form__inner">
             <form class="register-form__form" action="/weight_logs" method="post">
                 @csrf
                 <div class="register-form__group">
                     <label class="register-form__label" for="weight">現在の体重</label>
-                    <input class="register-form__input" type="text" name="weight" id="weight" placeholder="現在の体重を入力" value="{{ old('weight') }}" /><span class="kg">kg</span>
+                    <div class="register-form__input-wrapper">
+                        <input class="register-form__input" type="text" name="weight" id="weight" placeholder="現在の体重を入力" value="{{ old('weight') }}" />
+                        <span class="kg">kg</span>
+                    </div>
                     <p class="register-form__error-message">
                         @error('weight')
                         {{ $message }}
                         @enderror
-                        </p>
+                    </p>
                 </div>
                 <div class="register-form__group">
                     <label class="register-form__label" for="target_weight">目標の体重</label>
-                    <input class="register-form__input" type="text" name="target_weight" id="target_weight" placeholder="目標の体重を入力" value="{{ old('target_weight') }}" /><span class="kg">kg</span>
+                    <div class="register-form__input-wrapper">
+                        <input class="register-form__input" type="text" name="target_weight" id="target_weight" placeholder="目標の体重を入力" value="{{ old('target_weight') }}" />
+                        <span class="kg">kg</span>
+                    </div>
                     <p class="register-form__error-message">
                         @error('target_weight')
                         {{ $message }}
                         @enderror
                     </p>
                 </div>
-                <input class="register-form__button" type="submit" value="アカウント作成">
+                <div class="register-form__button">
+                    <input class="create" type="submit" value="アカウント作成">
+                </div>
             </form>
         </div>
     </div>

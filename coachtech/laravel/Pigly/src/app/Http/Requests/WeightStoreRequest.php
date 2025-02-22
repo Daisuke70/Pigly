@@ -32,7 +32,7 @@ class WeightStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'weight.required' => '体重を入力してください。',
+            'weight.required' => '現在の体重を入力してください。',
             'weight.numeric' => '数字で入力してください。',
             'weight.between' => '4桁までの数字で入力してください。',
             'weight.regex' => '小数点は1桁で入力してください。',

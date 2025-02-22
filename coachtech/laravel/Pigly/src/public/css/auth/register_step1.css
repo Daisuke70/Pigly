@@ -8,7 +8,7 @@ body {
 
 .register-form {
     background: white;
-    width: 500px;
+    width: 520px;
     height: auto;
     min-height: 690px;
     border-radius: 20px;
@@ -41,7 +41,8 @@ body {
 
 .register-form__label {
     display: block;
-    margin-top: 25px;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
 
@@ -73,7 +74,6 @@ body {
 }
 
 .login {
-    text-decoration: none;
     margin-top: 25px;
     color: #00BEFF;
     margin-bottom: 40px;
@@ -81,6 +81,6 @@ body {
 
 .register-form__error-message {
     color: red;
-    font-size: 12px;
+    font-size: 15px;
     margin-top: px;
 }
