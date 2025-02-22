@@ -8,9 +8,11 @@
 </head>
 <body>
     <div class="register-form">
-        <h1 class="register-form__heading">PiGLy</h1>
-        <h2>新規会員登録</h2>
-        <p>STEP1 アカウント情報の登録</p>
+        <div class="register-form__title">
+            <h1 class="register-form__heading">PiGLy</h1>
+            <h2 class="register-form__heading2">新規会員登録</h2>
+            <p>STEP1 アカウント情報の登録</p>
+        </div>
 
         <div class="register-form__inner">
             <form class="register-form__form" action="/register/step2" method="post">
@@ -42,9 +44,11 @@
                         @enderror
                     </p>
                 </div>
-                <input class="register-form__button" type="submit" value="次に進む">
+                <div class="register-form__button">
+                    <input class="next" type="submit" value="次に進む">
+                </div>
             </form>
-            <a href="/login">ログインはこちら</a>
+            <a href="/login" class="login">ログインはこちら</a>
         </div>
     </div>
 </body>

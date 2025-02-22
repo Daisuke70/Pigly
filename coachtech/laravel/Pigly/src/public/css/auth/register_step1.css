@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(-300deg, #FCDAF8, #FFDBEA, #FFD6D4, 	#FEB5C5, #FF93BC);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-form {
+    background: white;
+    width: 500px;
+    height: auto;
+    min-height: 690px;
+    border-radius: 20px;
+}
+
+.register-form__title {
+    text-align: center;
+}
+
+.register-form__heading {
+    color: #EE86EE;
+    font-size: 55px;
+    font-weight: 100;
+    font-family: geller-headline, serif;
+}
+
+.register-form__heading2 {
+    font-weight: 100;
+    font-size: 25px;
+    font-family: geller-headline, serif;
+    margin-top: -30px;
+}
+
+.register-form__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register-form__label {
+    display: block;
+    margin-top: 25px;
+}
+
+
+.register-form__input {
+    display: block;
+    align-items: center;
+    width: 425px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: solid 1px #dcdcdc;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.register-form__button {
+    text-align: center;
+}
+
+.next {
+    width: 220px;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    background: linear-gradient(280deg, #FBABD6, #ECABDC, #D6AADB, #BFA9DE, #A7A7E0);
+}
+
+.login {
+    text-decoration: none;
+    margin-top: 25px;
+    color: #00BEFF;
+    margin-bottom: 40px;
+}
+
+.register-form__error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: px;
+}
