@@ -6,23 +6,20 @@
 @endsection
 
 @section('content')
-<div class="weight-summary">
-    <div class="weight-summary__item">
-        <h1 class="weight-summary__label">目標体重</h1>
-        <p class="weight-summary__value">{{ $targetWeight }}</p>
-        <span class="weight-summary__unit">kg</span>
-    </div>
-    <div class="weight-summary__item">
-        <p class="weight-summary__label">目標まで</p>
-        <p class="weight-summary__value">{{ number_format($differenceWeight, 1) }}</p>
-        <span class="weight-summary__unit">kg</span>
-    </div>
-    <div class="weight-summary__item">
-        <p class="weight-summary__label">最新体重</p>
-        <p class="weight-summary__value">{{ $latestWeight }}</p>
-        <span class="weight-summary__unit">kg</span>
-    </div>
-</div>
+    <section class="weight-summary">
+        <div class="target-weight">
+            <h2 class="target-weight__title">目標体重</h2>
+            <p class="target-weight__value">{{ $targetWeight }}<span class="kg">kg</span></p>
+        </div>
+        <div class="difference-weight">
+            <h2 class="difference-weight__title">目標まで</h2>
+            <p class="difference-weight__value">{{ number_format($differenceWeight, 1) }}<span class="kg">kg</span></p>
+            </div>
+        <div class="latest-weight">
+            <h2 class="latest-weight__title">最新体重</h2>
+            <p class="latest-weight__value">{{ $latestWeight }}<span class="kg">kg</span></p>
+        </div>
+    </section>
 
 
 @endsection

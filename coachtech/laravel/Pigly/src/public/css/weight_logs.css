@@ -7,34 +7,73 @@
 
 .weight-summary {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+    margin: 50px 185px 0px 185px;
+    height: 130px;
 }
 
-.weight-summary__item {
+.target-weight {
     text-align: center;
     flex: 1;
+    margin: 0 10px;
+    border-right: 1px solid;
 }
 
-.weight-summary__label {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
+.difference-weight {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
 }
 
-.weight-summary__value {
-    font-size: 32px;
+.latest-weight {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    border-left: 1px solid;
+}
+
+.target-weight__title {
+    font-size: 18px;
+    font-weight: lighter;
+    padding-top: 10px;
+    margin-right: 200px;
+}
+
+.difference-weight__title {
+    font-size: 18px;
+    font-weight: lighter;
+    padding-top: 10px;
+    margin-right: 70px;
+}
+
+.latest-weight__title {
+    font-size: 18px;
+    font-weight: lighter;
+    padding-top: 10px;
+    margin-right: 80px;
+}
+
+.target-weight__value {
+    font-size: 35px;
     font-weight: bold;
-    color: #333;
+    margin: -5px 160px 30px 0px;
 }
 
-.weight-summary__unit {
-    font-size: 14px;
-    color: #666;
+.difference-weight__value {
+    font-size: 35px;
+    font-weight: bold;
+    margin: -5px 100px 0px 50px;
+}
+
+.latest-weight__value {
+    font-size: 35px;
+    font-weight: bold;
+    margin: -5px 100px 0px 50px;
+}
+
+.kg {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-left: 8px;
 }
