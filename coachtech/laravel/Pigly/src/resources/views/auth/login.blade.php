@@ -7,7 +7,7 @@
     <title>ログイン画面</title>
 </head>
 <body>
-<div class="login-form">
+    <div class="login-form">
         <div class="login-form__title">
             <h1 class="login-form__heading">PiGLy</h1>
             <h2 class="login-form__heading2">ログイン</h2>

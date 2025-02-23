@@ -39,7 +39,15 @@ class WeightController extends Controller
 
     public function index()
     {
-        return view('weight_logs');
+        $targetWeight = DB::table('weight_target')->value('target_weight');
+
+        $latestWeight = DB::table('weight_logs')
+        ->orderBy('date', 'desc')
+        ->value('weight');
+
+        $differenceWeight = $targetWeight - $latestWeight;
+
+    return view('weight_logs', compact('targetWeight', 'latestWeight', 'differenceWeight'));
     }
 
 

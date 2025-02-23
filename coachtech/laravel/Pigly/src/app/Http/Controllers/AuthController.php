@@ -37,7 +37,7 @@ class AuthController extends Controller
     public function login(LoginRequest $request)
     {
         $credentials = $request->only('email', 'password');
-
+        $request->authenticate();
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/weight_logs');
         }

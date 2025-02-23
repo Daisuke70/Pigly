@@ -1,0 +1,40 @@
+.content {
+    background-color: #F9F9F9;
+    min-height: 100vh;
+    min-width: 100vh;
+    border-top: 1px solid #C9C9C9;
+}
+
+.weight-summary {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.weight-summary__item {
+    text-align: center;
+    flex: 1;
+}
+
+.weight-summary__label {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.weight-summary__value {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.weight-summary__unit {
+    font-size: 14px;
+    color: #666;
+}
